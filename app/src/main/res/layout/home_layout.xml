@@ -6,13 +6,13 @@
     android:gravity="center_horizontal">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
         android:src="@drawable/mario"
-        android:layout_below="@+id/Textservice"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp" />
+        android:layout_below="@+id/textView3"
+        android:layout_alignEnd="@+id/informatiebutton"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
         android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
+        android:layout_alignStart="@+id/imageView"
         android:layout_alignEnd="@+id/textView5" />
 
     <TextView
@@ -64,9 +64,8 @@
         android:text="Kies uw service:"
         android:id="@+id/textView5"
         android:textSize="10pt"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/welkomscherm"
-        android:layout_marginTop="20dp" />
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
     <TextView
         android:layout_width="match_parent"
@@ -74,16 +73,16 @@
         android:text="New Text"
         android:id="@+id/Textservice"
         android:gravity="center_horizontal"
+        android:height="70dp"
         android:layout_below="@+id/spinner"
-        android:layout_centerHorizontal="true"
-        android:height="70dp" />
+        android:layout_alignEnd="@+id/textView3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Service aanvraag"
         android:id="@+id/informatiebutton"
-        android:layout_above="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/Textservice"
+        android:layout_alignStart="@+id/welkomscherm" />
 
 </RelativeLayout>

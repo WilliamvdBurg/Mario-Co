@@ -47,8 +47,7 @@ public class HomeFragment extends Fragment {
 
 
     public void dataOphalen() {
-
-        //ophalen van de services
+// in deze code
         serviceLijst = new ArrayList<String>();
         JSONObject jsonObject = new JSONObject();
         try {

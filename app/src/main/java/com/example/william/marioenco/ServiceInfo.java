@@ -16,13 +16,15 @@ public class ServiceInfo extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_info);
 
+// knop aanmaken om terug te gaan naar homefragment
 
-        Button annuleer = (Button) rootview.findViewById(R.id.annuleer);
-        annuleer.setOnClickListener(new View.OnClickListener() {
+        Button annuleerKnop = (Button) findViewById(R.id.annuleer);
+
+        annuleerKnop.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(ServiceInfo.this, MainActivity.class);
+                Intent home = new Intent(getApplicationContext(), MainActivity.class);
 
-                startActivity(i);
+                startActivity(home);
             }
         });
     }
