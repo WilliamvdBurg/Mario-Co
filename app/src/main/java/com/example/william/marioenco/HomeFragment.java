@@ -24,7 +24,7 @@ import java.util.concurrent.ExecutionException;
  * Created by William on 11-1-2015.
  */
 public class HomeFragment extends Fragment{
-    public static String serverIp;
+    public static String serverIp = "192.168.2.3";
     public static int serverPort = 4444;
     public static ArrayList<String> serviceLijst;
     public static ArrayList<JSONObject> Informatielijst;
@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.home_layout,container,false);
+        dataOphalen();
         return rootview;
     }
     public void dataOphalen() {
