@@ -1,6 +1,7 @@
 package com.example.william.marioenco;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,27 +25,30 @@ import java.util.concurrent.ExecutionException;
 /**
  * Created by William on 11-1-2015.
  */
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment {
+
     public static String serverIp = "192.168.2.3";
     public static int serverPort = 4444;
     public static ArrayList<String> serviceLijst;
-    public static ArrayList<JSONObject> Informatielijst;
+    public static ArrayList<JSONObject> beknopteInformatielijst;
     public String informatiebeknopt = null;
     public static View rootview;
     public Spinner spinner;
     public static String servicenaam;
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.home_layout,container,false);
+        rootview = inflater.inflate(R.layout.home_layout, container, false);
         dataOphalen();
         return rootview;
+
     }
+
+
     public void dataOphalen() {
 
-        //Hierin haal ik de services op.
+        //ophalen van de services
         serviceLijst = new ArrayList<String>();
         JSONObject jsonObject = new JSONObject();
         try {
@@ -54,7 +59,7 @@ public class HomeFragment extends Fragment{
         String response = null;
         try {
             try {
-                // Het ip adris moet het ip adres zijn van de server.
+                // Dit IP adres moet IP adres van server zijn.
                 response = new ServerCommunicator(serverIp,
                         serverPort, jsonObject.toString()).execute().get();
 
@@ -97,7 +102,7 @@ public class HomeFragment extends Fragment{
 
             }
             // haal beknopte informatie op
-            Informatielijst = new ArrayList<JSONObject>();
+            beknopteInformatielijst = new ArrayList<JSONObject>();
             JSONObject beknoptjObject = new JSONObject();
             try {
                 for (int i = 0; i < serviceLijst.size(); i++) {
@@ -115,7 +120,7 @@ public class HomeFragment extends Fragment{
                     }
                     String infoFix = informatiebeknopt.replace("null", "");
                     JSONObject fixedjObject = new JSONObject(infoFix);
-                    Informatielijst.add(fixedjObject);
+                    beknopteInformatielijst.add(fixedjObject);
 
                     Log.i("informatiebeknopt", infoFix);
                 }
@@ -144,11 +149,11 @@ public class HomeFragment extends Fragment{
                                                View arg1, int position, long arg3) {
                         // TODO Auto-generated method stub
                         // Locate the textviews in activity_main.xml
-                        TextView Textservice = (TextView) rootview.findViewById(R.id.Textservice);
+                        TextView beknopteinfo = (TextView) rootview.findViewById(R.id.Textservice);
 
                         try {
                             // Set the text followed by the position
-                            Textservice.setText(Informatielijst.get(position).getString("informatiebeknopt"));
+                            beknopteinfo.setText(beknopteInformatielijst.get(position).getString("informatiebeknopt"));
                             servicenaam = serviceLijst.get(position);
 
                         } catch (Exception e) {
@@ -162,6 +167,16 @@ public class HomeFragment extends Fragment{
                         // TODO Auto-generated method stub
                     }
                 });
-    }
+
+
+        Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
+        informatiebutton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(rootview.getContext(), ServiceInfo.class);
+
+                startActivity(i);
+            }
+        });
 
     }
+}

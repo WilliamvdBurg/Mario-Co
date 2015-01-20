@@ -17,11 +17,10 @@ public class InformatieFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.informatie_layout,container,false);
+        rootview = inflater.inflate(R.layout.informatie_layout, container, false);
         return rootview;
-
-
+    }
 
     }
-}
+
 

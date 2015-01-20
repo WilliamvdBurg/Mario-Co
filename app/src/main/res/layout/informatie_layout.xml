@@ -35,7 +35,7 @@
         android:layout_marginBottom="70dp"
         android:textSize="10pt" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
@@ -45,15 +45,18 @@
         android:maxWidth="350dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:textSize="10pt" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:text="Om een service aan te vragen gaat u naar de pagina &quot;service. De pagina is hieronder vermeld."
         android:gravity="center_horizontal"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="10pt"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
 
 </RelativeLayout>
