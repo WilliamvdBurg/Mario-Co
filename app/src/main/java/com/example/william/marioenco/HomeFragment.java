@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
         String response = null;
         try {
             try {
-                // Dit IP adres moet IP adres van server zijn.
+                // Het ip adres die ik hieronder aanmaakt moet het ip adres zijn van de server waaruit die alles moet ophalen
                 response = new ServerCommunicator(serverIp,
                         serverPort, jsonObject.toString()).execute().get();
 
@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment {
         }
         if (response == null) {
 
-            Toast.makeText(rootview.getContext(), "Kan geen verbinding maken met de server.", Toast.LENGTH_LONG).show();
+            Toast.makeText(rootview.getContext(), "Verbinding met de server niet mogelijk.", Toast.LENGTH_LONG).show();
         } else {
             // Haal de null naam weg van de JSONArray (Voorkomt error)
             String jsonFix = response.replace("null", "");
@@ -100,7 +100,7 @@ public class HomeFragment extends Fragment {
                 serviceLijst.add(value);
 
             }
-            // haal beknopte informatie op
+            // haaalt de beknopte informatie op.
             beknopteInformatielijst = new ArrayList<JSONObject>();
             JSONObject beknoptjObject = new JSONObject();
             try {
@@ -130,16 +130,14 @@ public class HomeFragment extends Fragment {
         }
 
 
-        // Locate the spinner in activity_main.xml
+        // Hieronder maak ik de spinner aan en geef ik aan waaaruit hij de informatie moet halen. Dit komt uit de server.
         spinner = (Spinner) rootview.findViewById(R.id.spinner);
 
-        // Spinner adapter
         spinner
                 .setAdapter(new ArrayAdapter<String>(rootview.getContext(),
                         android.R.layout.simple_spinner_dropdown_item,
                         serviceLijst));
 
-        // Spinner on item click listener
         spinner
                 .setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -147,11 +145,10 @@ public class HomeFragment extends Fragment {
                     public void onItemSelected(AdapterView<?> arg0,
                                                View arg1, int position, long arg3) {
                         // TODO Auto-generated method stub
-                        // Locate the textviews in activity_main.xml
+                        // geeft aan waar de text moet komen in de homefragment. DIt komt te staan in de textview Textservice.
                         TextView beknopteinfo = (TextView) rootview.findViewById(R.id.Textservice);
 
                         try {
-                            // Set the text followed by the position
                             beknopteinfo.setText(beknopteInformatielijst.get(position).getString("informatiebeknopt"));
                             servicenaam = serviceLijst.get(position);
 
@@ -167,8 +164,8 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
-
-        Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
+               //Hier koppel ik de button aan de pagina serviceinfo
+               Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
         informatiebutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(rootview.getContext(), ServiceInfo.class);
