@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,28 @@ public class IpInvoerScherm extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ip_invoer_scherm);
+
+
+        //Enter key submit
+        EditText ipInvoer = (EditText) findViewById(R.id.ipinvoering);
+        ipInvoer.setOnKeyListener(new View.OnKeyListener() {
+
+            public boolean onKey(View v, int key, KeyEvent event) {
+
+                switch(key) {
+                    case KeyEvent.KEYCODE_ENTER:
+                        checkServer();
+                        break;
+
+                    default:
+                        return false;
+                }
+
+                return true;
+
+            }
+        });
+
 
         Button ipButton = (Button) findViewById(R.id.IpKnop);
         ipButton.setOnClickListener(new View.OnClickListener() {
@@ -131,4 +155,6 @@ public class IpInvoerScherm extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

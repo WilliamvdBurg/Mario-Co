@@ -10,7 +10,7 @@
         android:layout_height="300dp"
         android:id="@+id/imageView3"
         android:src="@drawable/mario"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_alignParentEnd="true"
@@ -21,9 +21,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/progressBar2"
-        android:layout_below="@+id/imageView3"
+        android:background="#ffffffff"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
-        android:background="#ffffffff" />
+        android:layout_marginBottom="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mario&amp;Co"
+        android:id="@+id/textView9"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:textStyle="bold"
+        android:textSize="18pt"
+        android:textColor="#ffff3122" />
 
 </RelativeLayout>

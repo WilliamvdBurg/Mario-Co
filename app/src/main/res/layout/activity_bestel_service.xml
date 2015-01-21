@@ -4,9 +4,101 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.william.marioenco.BestelService">
+    tools:context="com.example.william.marioenco.ServiceBestellen"
+    android:id="@+id/bestellen"
+    android:background="#ffffffff">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/mario"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/serviceNaam"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffff1b19"
+        android:textSize="12pt" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/aanvraagBeknopteinformatie"
+        android:layout_marginTop="53dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/naamVeld"
+        android:hint="Naam"
+        android:layout_below="@+id/emailVeld"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffff0001" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/adresVeld"
+        android:hint="Adres"
+        android:layout_below="@+id/naamVeld"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffff0001" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/telefoonVeld"
+        android:hint="Telefoonnummer"
+        android:layout_below="@+id/adresVeld"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffff0001" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailVeld"
+        android:hint="Emailadres"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/naamVeld"
+        android:textColor="#ffff0001" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Annuleren"
+        android:id="@+id/bestelAnnuleer"
+        android:layout_alignTop="@+id/bestelBevestigen"
+        android:layout_alignParentStart="true"
+        android:background="#ffadff94" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Bevestigen"
+        android:id="@+id/bestelBevestigen"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ffadff94" />
 
 </RelativeLayout>

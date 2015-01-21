@@ -20,20 +20,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Informatie"
         android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:textSize="20pt"
         android:layout_alignBottom="@+id/imageView2"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="20pt" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Service aanvraag"
-        android:id="@+id/button"
-        android:layout_marginBottom="50dp"
-        android:textSize="10pt"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="#ffff1b19" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,5 +49,15 @@
         android:layout_below="@+id/editText"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:textSize="15pt"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffff0e01" />
 
 </RelativeLayout>

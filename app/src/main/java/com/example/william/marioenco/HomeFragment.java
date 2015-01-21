@@ -27,7 +27,7 @@ import java.util.concurrent.ExecutionException;
  */
 public class HomeFragment extends Fragment {
 
-    public static String serverIp = "192.168.2.3";
+    public static String serverIp ;
     public static int serverPort = 4444;
     public static ArrayList<String> serviceLijst;
     public static ArrayList<JSONObject> beknopteInformatielijst;
@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment {
     public static View rootview;
     public Spinner spinner;
     public static String servicenaam;
+    public static int selectedPosition;
 
     @Nullable
     @Override

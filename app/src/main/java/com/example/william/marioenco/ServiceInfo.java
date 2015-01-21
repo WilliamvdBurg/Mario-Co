@@ -18,15 +18,18 @@ import java.util.concurrent.ExecutionException;
 
 public class ServiceInfo extends ActionBarActivity {
     public static View rootview;
+    public static String servicenaam;
     private String ip;
     private int port = 4444;
     private String informatiegedetailleerd;
     private String uitgebreideinformatie;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        servicenaam = HomeFragment.servicenaam;
         setContentView(R.layout.activity_service_info);
 
         ip = HomeFragment.serverIp;
