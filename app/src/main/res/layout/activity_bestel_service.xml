@@ -9,8 +9,8 @@
     android:background="#ffffffff">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/imageView2"
         android:src="@drawable/mario"
         android:layout_alignParentTop="true"
