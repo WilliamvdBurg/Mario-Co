@@ -28,7 +28,7 @@ public class ServerCommunicator extends AsyncTask<Void, Void, String> {
 
     public ServerCommunicator(String ip, int port, String message ){
         super();
-        //gegevens om naar de server te verbinden en een message te sturen
+        //Dit zijn de gegevens die de server verbinden en messages sturen
         this.message = message;
         this.ip = ip;
         this.port = port;
@@ -41,8 +41,8 @@ public class ServerCommunicator extends AsyncTask<Void, Void, String> {
         try {
             Socket serverSocket = new Socket();
             serverSocket.connect(new InetSocketAddress(this.ip, this.port), 4444);
-
             //verzend een bericht naar de server
+
             this.sendMessage(message, serverSocket);
 
             InputStream input;
