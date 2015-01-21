@@ -14,5 +14,7 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_service_info">ServiceInfo</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_bestel_service">BestelService</string>
+    <string name="title_activity_ip_invoer_scherm">IpInvoerScherm</string>
 
 </resources>

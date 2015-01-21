@@ -48,4 +48,12 @@
             android:layout_column="1" />
     </GridLayout>
 
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/infoVeld"
+        android:layout_centerHorizontal="true">
+
+        </GridLayout>
+
 </RelativeLayout>

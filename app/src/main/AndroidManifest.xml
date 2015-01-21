@@ -29,6 +29,14 @@
             android:name=".ServiceInfo"
             android:label="@string/title_activity_service_info" >
         </activity>
+        <activity
+            android:name=".BestelService"
+            android:label="@string/title_activity_bestel_service" >
+        </activity>
+        <activity
+            android:name=".IpInvoerScherm"
+            android:label="@string/title_activity_ip_invoer_scherm" >
+        </activity>
     </application>
 
 </manifest>
