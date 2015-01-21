@@ -30,6 +30,7 @@ public class BestelService extends Activity {
     private static String telefoon;
     private static String email;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -58,8 +59,6 @@ public class BestelService extends Activity {
         {
 
         }
-
-
 
         bestelknop = (Button) findViewById(R.id.bestelBevestigen);
         bestelknop.setOnClickListener(new View.OnClickListener() {

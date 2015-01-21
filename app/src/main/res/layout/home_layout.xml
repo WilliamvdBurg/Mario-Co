@@ -66,8 +66,7 @@
         android:id="@+id/textView5"
         android:textSize="10pt"
         android:layout_below="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
-        android:textColor="#ffff1b19" />
+        android:layout_alignEnd="@+id/imageView" />
 
     <TextView
         android:layout_width="match_parent"
