@@ -4,13 +4,13 @@
     <string name="app_name">MarioEnCo</string>
     <string name="title_section1">Home</string>
     <string name="title_section2">Informatie</string>
-    <string name="title_section3">Service</string>
+    <string name="title_section3">Contact</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splashscreen">Splashscreen</string>
-    <string name="lblTxt">This is another activity sarting by main activity</string>
+    <string name="lblTxt">This is another activity starting by main activity</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_service_info">ServiceInfo</string>
     <string name="hello_world">Hello world!</string>

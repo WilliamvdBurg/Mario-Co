@@ -32,6 +32,8 @@ public class HomeFragment extends Fragment {
     public static ArrayList<String> serviceLijst;
     public static ArrayList<JSONObject> beknopteInformatielijst;
     public String informatiebeknopt = null;
+
+    private Spinner service_spinner;
     public static View rootview;
     public Spinner spinner;
     public static String servicenaam;
@@ -45,7 +47,6 @@ public class HomeFragment extends Fragment {
         return rootview;
 
     }
-
 
     public void dataOphalen() {
 // in deze code
@@ -165,8 +166,10 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
-               //Hier koppel ik de button aan de pagina serviceinfo
-               Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
+
+
+           //Hier koppel ik de button aan de pagina serviceinfo
+        Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
         informatiebutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(rootview.getContext(), ServiceInfo.class);

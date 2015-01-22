@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 /**
  * Created by William on 11-1-2015.
  */
-public class ServiceFragment extends Fragment{
+public class ContactFragment extends Fragment{
     View rootview;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.service_layout,container,false);
+        rootview = inflater.inflate(R.layout.contact_layout,container,false);
         return rootview;
     }
 }

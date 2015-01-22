@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#ffffffff">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact"
+        android:id="@+id/textView"
+        android:layout_marginTop="43dp"
+        android:textSize="20pt"
+        android:textColor="#ffff0300"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="voor meer informatie over de app kan je ons bereiken onder:"
+        android:id="@+id/textView10"
+        android:gravity="center_horizontal"
+        android:textSize="10pt"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Telefoonnummer: 0713612345"
+    android:id="@+id/textView11"
+    android:textSize="8pt"
+    android:gravity="center_horizontal"
+        android:layout_below="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Email: Mario@hotmail.com"
+        android:textSize="8pt"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Mobiele: 0613612345"
+        android:textSize="8pt"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView11"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView12" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/textView" />
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/mario"
+        android:layout_below="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

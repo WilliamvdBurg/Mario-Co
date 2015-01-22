@@ -21,7 +21,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:id="@+id/ipinvoering"
+        android:id="@+id/ipinvoer"
         android:layout_above="@+id/IpKnop"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="68dp"
@@ -36,8 +36,8 @@
         android:text="Ip:"
         android:id="@+id/textView6"
         android:textSize="12pt"
-        android:layout_alignBottom="@+id/ipinvoering"
-        android:layout_toStartOf="@+id/ipinvoering" />
+        android:layout_alignBottom="@+id/ipinvoer"
+        android:layout_toStartOf="@+id/textView8" />
 
     <TextView
         android:layout_width="wrap_content"

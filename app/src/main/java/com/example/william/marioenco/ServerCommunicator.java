@@ -23,12 +23,12 @@ public class ServerCommunicator extends AsyncTask<Void, Void, String> {
 
     private String message;
     private String ip;
-    private int port;
+    public static int port = 4444;
     private String response = null;
 
     public ServerCommunicator(String ip, int port, String message ){
         super();
-        //Dit zijn de gegevens die de server verbinden en messages sturen
+        //Hier maak je de gegevsna aan die er zijn om verbinden ye gaan maken met de server een dan een message kunen sturen//
         this.message = message;
         this.ip = ip;
         this.port = port;
@@ -41,8 +41,8 @@ public class ServerCommunicator extends AsyncTask<Void, Void, String> {
         try {
             Socket serverSocket = new Socket();
             serverSocket.connect(new InetSocketAddress(this.ip, this.port), 4444);
-            //verzend een bericht naar de server
 
+            // Hierin word datbericht gestuurd naar de server. Je stuurt een bericht om een antwoord terug te krijgen
             this.sendMessage(message, serverSocket);
 
             InputStream input;
@@ -67,8 +67,9 @@ public class ServerCommunicator extends AsyncTask<Void, Void, String> {
 
             System.out.println("Response: " + response);
 
-            //gebruik de volgende twee methoden van de activity om informatie naar de UI thread (de activity) te sturen
-        } catch (UnknownHostException e) {
+            //Hieronder worden twee methoden gebruikt van de activity
+            //Deze zijn er om informatie naar de UI thread te sturen
+                    } catch (UnknownHostException e) {
             Log.d("debug", "can't find host");
         } catch (SocketTimeoutException e) {
             Log.d("debug", "time-out");

@@ -50,7 +50,7 @@ public class BestelService extends Activity {
         koperEmail.setText(email);
 
         final TextView serviceNaam = (TextView) findViewById(R.id.serviceNaam);
-        serviceNaam.setText("Service: " + servicenaam);
+        serviceNaam.setText("Bestel: " + servicenaam);
         final TextView serviceBeknopteinformatie = (TextView) findViewById(R.id.aanvraagBeknopteinformatie);
         try{
             serviceBeknopteinformatie.setText(HomeFragment.beknopteInformatielijst.get(HomeFragment.selectedPosition).getString("informatiebeknopt"));

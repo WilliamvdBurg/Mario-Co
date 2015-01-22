@@ -67,7 +67,7 @@ public class MainActivity extends ActionBarActivity
                 objFragment = new InformatieFragment();
                 break;
             case 2:
-                objFragment = new ServiceFragment();
+                objFragment = new ContactFragment();
                 break;
         }
         // update the main content by replacing fragments
