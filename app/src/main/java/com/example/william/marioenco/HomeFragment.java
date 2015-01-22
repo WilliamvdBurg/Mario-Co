@@ -29,28 +29,28 @@ public class HomeFragment extends Fragment {
 
     public static String serverIp ;
     public static int serverPort = 4444;
-    public static ArrayList<String> serviceLijst;
-    public static ArrayList<JSONObject> beknopteInformatielijst;
-    public String informatiebeknopt = null;
+    public static ArrayList<String> services;
+    public static ArrayList<JSONObject> beknopteLijst;
+    public String beknopt = null;
 
-    private Spinner service_spinner;
     public static View rootview;
     public Spinner spinner;
     public static String servicenaam;
-    public static int selectedPosition;
+    public static int laatstepositie;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.home_layout, container, false);
-        dataOphalen();
+        dataDownload();
+        spinner.setSelection(laatstepositie);
         return rootview;
 
     }
 
-    public void dataOphalen() {
+    public void dataDownload() {
 // in deze code
-        serviceLijst = new ArrayList<String>();
+        services = new ArrayList<String>();
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("servicelijst", "");
@@ -86,7 +86,7 @@ public class HomeFragment extends Fragment {
 
             JSONObject jObject = null;
             String value = null;
-            serviceLijst = new ArrayList<String>();
+            services = new ArrayList<String>();
 
             for (int i = 0; i < JArray.length(); i++) {
                 try {
@@ -99,18 +99,18 @@ public class HomeFragment extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                serviceLijst.add(value);
+                services.add(value);
 
             }
             // haaalt de beknopte informatie op.
-            beknopteInformatielijst = new ArrayList<JSONObject>();
+            beknopteLijst = new ArrayList<JSONObject>();
             JSONObject beknoptjObject = new JSONObject();
             try {
-                for (int i = 0; i < serviceLijst.size(); i++) {
-                    beknoptjObject.put("informatiebeknopt", serviceLijst.get(i));
+                for (int i = 0; i < services.size(); i++) {
+                    beknoptjObject.put("informatiebeknopt", services.get(i));
                     try {
                         try {
-                            informatiebeknopt = new ServerCommunicator(serverIp,
+                            beknopt = new ServerCommunicator(serverIp,
                                     serverPort, beknoptjObject.toString()).execute().get();
 
                         } catch (ExecutionException e) {
@@ -119,9 +119,9 @@ public class HomeFragment extends Fragment {
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
                     }
-                    String infoFix = informatiebeknopt.replace("null", "");
+                    String infoFix = beknopt.replace("null", "");
                     JSONObject fixedjObject = new JSONObject(infoFix);
-                    beknopteInformatielijst.add(fixedjObject);
+                    beknopteLijst.add(fixedjObject);
 
                     Log.i("informatiebeknopt", infoFix);
                 }
@@ -138,7 +138,7 @@ public class HomeFragment extends Fragment {
         spinner
                 .setAdapter(new ArrayAdapter<String>(rootview.getContext(),
                         android.R.layout.simple_spinner_dropdown_item,
-                        serviceLijst));
+                        services));
 
         spinner
                 .setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -149,10 +149,10 @@ public class HomeFragment extends Fragment {
                         // TODO Auto-generated method stub
                         // geeft aan waar de text moet komen in de homefragment. DIt komt te staan in de textview Textservice.
                         TextView beknopteinfo = (TextView) rootview.findViewById(R.id.Textservice);
-
+                        laatstepositie = position;
                         try {
-                            beknopteinfo.setText(beknopteInformatielijst.get(position).getString("informatiebeknopt"));
-                            servicenaam = serviceLijst.get(position);
+                            beknopteinfo.setText(beknopteLijst.get(position).getString("informatiebeknopt"));
+                            servicenaam = services.get(position);
 
                         } catch (Exception e) {
 
@@ -168,11 +168,14 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
            //Hier koppel ik de button aan de pagina serviceinfo
         Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
         informatiebutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent i = new Intent(rootview.getContext(), ServiceInfo.class);
+
 
                 startActivity(i);
             }

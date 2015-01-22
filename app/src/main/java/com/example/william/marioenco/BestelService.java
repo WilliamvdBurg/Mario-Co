@@ -23,7 +23,7 @@ public class BestelService extends Activity {
     private int port = 4444;
 
     String responseFix;
-    Button annuleer;
+    Button annuleerknop;
     Button bestelknop;
     private static String naam;
     private static String adres;
@@ -53,7 +53,7 @@ public class BestelService extends Activity {
         serviceNaam.setText("Bestel: " + servicenaam);
         final TextView serviceBeknopteinformatie = (TextView) findViewById(R.id.aanvraagBeknopteinformatie);
         try{
-            serviceBeknopteinformatie.setText(HomeFragment.beknopteInformatielijst.get(HomeFragment.selectedPosition).getString("informatiebeknopt"));
+            serviceBeknopteinformatie.setText(HomeFragment.beknopteLijst.get(HomeFragment.laatstepositie).getString("informatiebeknopt"));
         }
         catch(JSONException e)
         {
@@ -66,8 +66,8 @@ public class BestelService extends Activity {
                 plaatsBestelling();
             }
         });
-        annuleer = (Button) findViewById(R.id.bestelAnnuleer);
-        annuleer.setOnClickListener(new View.OnClickListener() {
+        annuleerknop = (Button) findViewById(R.id.bestelAnnuleer);
+        annuleerknop.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
 
@@ -144,7 +144,7 @@ public class BestelService extends Activity {
         telefoon = koperTelefoon.getText().toString();
         email = koperEmail.getText().toString();
 
-        annuleer.setText("terug");
+        annuleerknop.setText("terug");
 
     }
 
