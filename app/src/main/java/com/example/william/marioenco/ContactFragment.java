@@ -14,6 +14,7 @@ public class ContactFragment extends Fragment{
     View rootview;
     @Nullable
     @Override
+    // word gekoppeld aan zijn layout
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.contact_layout,container,false);
         return rootview;

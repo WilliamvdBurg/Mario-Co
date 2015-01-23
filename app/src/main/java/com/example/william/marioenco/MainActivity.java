@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity
     private CharSequence mTitle;
 
     @Override
+    // word gekoppeld aan zijn layout
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

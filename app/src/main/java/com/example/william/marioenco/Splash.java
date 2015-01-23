@@ -11,6 +11,7 @@ import android.os.Bundle;
 public class Splash extends Activity {
 
     @Override
+    // word gekoppeld aan zijn layout
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);

@@ -26,6 +26,7 @@ public class ServiceInfo extends ActionBarActivity {
 
 
     @Override
+    // word gekoppeld aan zijn layout
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 

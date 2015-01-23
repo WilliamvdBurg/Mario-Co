@@ -40,6 +40,7 @@ public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
+    // word gekoppeld aan zijn layout
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.home_layout, container, false);
         dataDownload();
@@ -74,7 +75,6 @@ public class HomeFragment extends Fragment {
 
             Toast.makeText(rootview.getContext(), "Verbinding met de server niet mogelijk.", Toast.LENGTH_LONG).show();
         } else {
-            // Haal de null naam weg van de JSONArray (Voorkomt error)
             String jsonFix = response.replace("null", "");
 
             JSONArray JArray = null;
@@ -102,7 +102,7 @@ public class HomeFragment extends Fragment {
                 services.add(value);
 
             }
-            // haaalt de beknopte informatie op.
+            // haaalt de informatie  van de beknoptelijst.
             beknopteLijst = new ArrayList<JSONObject>();
             JSONObject beknoptjObject = new JSONObject();
             try {
@@ -170,7 +170,7 @@ public class HomeFragment extends Fragment {
 
 
 
-           //Hier koppel ik de button aan de pagina serviceinfo
+           //Hier koppel ik de button aan de pagina serviceinfo. Wanneer er in de app op word geklkt gaat die naar de pagina service.
         Button informatiebutton = (Button) rootview.findViewById(R.id.informatiebutton);
         informatiebutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

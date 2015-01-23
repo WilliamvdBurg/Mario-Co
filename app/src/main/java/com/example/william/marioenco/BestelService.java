@@ -33,7 +33,7 @@ public class BestelService extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        // word gekoppeld aan zijn layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bestel_service);
         servicenaam = ServiceInfo.servicenaam;

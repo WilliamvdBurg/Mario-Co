@@ -40,7 +40,7 @@ public class IpInvoerScherm extends Activity {
 
 
     }
-
+// word textveld aangegeven waar ip moet worden ingevuld en hij word gekoppeld aan het ip
     private void checkServer() {
 
         TextView ipVeld = (TextView) findViewById(R.id.ipinvoer);
