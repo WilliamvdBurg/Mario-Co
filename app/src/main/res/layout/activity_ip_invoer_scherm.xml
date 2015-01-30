@@ -62,5 +62,13 @@
         android:textStyle="bold"
         android:textColor="#ffff1b19" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/ipinvoer"
+        android:layout_alignStart="@+id/textView6" />
+
 
 </RelativeLayout>
