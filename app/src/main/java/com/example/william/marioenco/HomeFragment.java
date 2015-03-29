@@ -132,7 +132,7 @@ public class HomeFragment extends Fragment {
         }
 
 
-        // Hieronder maak ik de spinner aan en geef ik aan waaaruit hij de informatie moet halen. Dit komt uit de server.
+        // Hieronder maak ik de spinner aan en geef ik aan waaaruit hij de informatie moet halen. Dit komt uit de server..
         spinner = (Spinner) rootview.findViewById(R.id.spinner);
 
         spinner
