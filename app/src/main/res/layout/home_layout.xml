@@ -11,8 +11,7 @@
         android:id="@+id/imageView"
         android:src="@drawable/mario"
         android:layout_below="@+id/textView3"
-        android:layout_alignEnd="@+id/informatiebutton"
-        android:layout_marginTop="20dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,13 +23,13 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="20pt"
-        android:textColor="#ffff1b19" />
+        android:textColor="#ff1d72ff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Loodgieters bedrijf Mario&amp;Co"
+        android:text="Slotenbedrijf De Sleutelaar"
         android:id="@+id/textView2"
         android:layout_below="@+id/welkomscherm"
         android:layout_centerHorizontal="true"
@@ -39,7 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Voor het repareren en aanleggen van al uw leidingwerk!"
+        android:text="Slotenbedrijf voor de particuliere en commerciéle sector."
         android:id="@+id/textView3"
         android:textSize="10pt"
         android:textStyle="normal|italic"
@@ -62,11 +61,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kies uw service:"
+        android:text="Kies uw gewenste slot:"
         android:id="@+id/textView5"
         android:textSize="10pt"
         android:layout_below="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -76,14 +75,14 @@
         android:gravity="center_horizontal"
         android:height="70dp"
         android:layout_below="@+id/spinner"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service aanvraag"
+        android:text="Slot aanvraag"
         android:id="@+id/informatiebutton"
-        android:layout_alignBottom="@+id/Textservice"
-        android:layout_alignStart="@+id/welkomscherm" />
+        android:layout_below="@+id/Textservice"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
