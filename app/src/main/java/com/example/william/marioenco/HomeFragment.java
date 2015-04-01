@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
         services = new ArrayList<String>();
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("servicelijst", "");
+            jsonObject.put("slotenlijst", "");
         } catch (JSONException e) {
             e.printStackTrace();
         }

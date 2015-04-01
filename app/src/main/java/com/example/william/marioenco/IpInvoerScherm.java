@@ -22,7 +22,7 @@ public class IpInvoerScherm extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("Mario en co");
+        setTitle("De Sleutelaar");
 
 
         super.onCreate(savedInstanceState);
