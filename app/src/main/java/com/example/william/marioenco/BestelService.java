@@ -101,7 +101,7 @@ public class BestelService extends Activity {
         JSONArray bestelArray = new JSONArray();
 
         try {
-            service.put("servicenaam", servicenaam);
+            service.put("slotnaam", servicenaam);
             gegevens.put("kopernaam", naam);
             gegevens.put("koperadres", adres);
             gegevens.put("kopertelnr", telefoon);
