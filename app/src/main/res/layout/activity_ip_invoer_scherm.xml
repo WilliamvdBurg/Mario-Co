@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="U dient uzelf eerst te connecte met de server."
+        android:text="U dient uzelf eerst te verbinden met de server."
         android:id="@+id/textView7"
         android:layout_marginTop="111dp"
         android:gravity="center_horizontal"
