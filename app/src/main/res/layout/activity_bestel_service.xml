@@ -90,7 +90,7 @@
         android:id="@+id/bestelAnnuleer"
         android:layout_alignTop="@+id/bestelBevestigen"
         android:layout_alignParentStart="true"
-        android:background="#ffadff94" />
+        android:background="#ffffda40" />
 
     <Button
         android:layout_width="100dp"
@@ -99,6 +99,6 @@
         android:id="@+id/bestelBevestigen"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="#ffadff94" />
+        android:background="#ffffda40" />
 
 </RelativeLayout>

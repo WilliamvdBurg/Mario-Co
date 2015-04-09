@@ -39,7 +39,7 @@
         android:layout_column="17"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="#ffadff94" />
+        android:background="#ffffda40" />
 
     <Button
         android:layout_width="100dp"
@@ -50,7 +50,7 @@
         android:layout_column="0"
         android:layout_alignTop="@+id/accepteer"
         android:layout_alignParentStart="true"
-        android:background="#ffadff94" />
+        android:background="#ffffda40" />
 
     <ImageView
         android:layout_width="70dp"
